@@ -1,37 +1,63 @@
-## Welcome to GitHub Pages
+# 🎵 Grave–Médio–Agudo
 
-You can use the [editor on GitHub](https://github.com/GlauberLASantiago/Grave-M-dio-Agudo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+O **Grave–Médio–Agudo** é um sketch interativo desenvolvido na linguagem **Processing** que funciona como um indicador visual para atividades musicais coletivas. Ele representa graficamente as regiões **aguda, média e grave** do som por meio da posição de um retângulo na tela.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A ferramenta foi pensada para apoiar práticas pedagógicas com estudantes instrumentistas, especialmente em exercícios de **improvisação coletiva**, nos quais o professor ou um aluno atua como condutor da atividade.
 
-### Markdown
+## 🎯 Objetivo do Projeto
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+O objetivo do programa é auxiliar na percepção e na resposta musical dos estudantes, criando uma relação direta entre **posição visual na tela** e **registro sonoro do instrumento**.
 
-```markdown
-Syntax highlighted code block
+Quando um comando é acionado no teclado, um retângulo aparece em uma posição específica da tela e os músicos devem tocar notas na região correspondente.
 
-# Header 1
-## Header 2
-### Header 3
+## ✨ Funcionamento
 
-- Bulleted
-- List
+Durante a atividade:
 
-1. Numbered
-2. List
+- O professor (ou um aluno) pressiona uma tecla no teclado do computador.
+- Dependendo da tecla pressionada, um retângulo aparece em uma região da tela.
+- Os instrumentistas observam a tela e executam uma nota na região indicada.
 
-**Bold** and _Italic_ and `Code` text
+### Comandos do teclado
 
-[Link](url) and ![Image](src)
-```
+| Tecla | Região representada | Posição na tela |
+|------|---------------------|-----------------|
+| **a** | Agudo | Parte superior |
+| **m** | Médio | Centro |
+| **g** | Grave | Parte inferior |
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## ⚙️ Lógica do Programa
 
-### Jekyll Themes
+O sketch funciona em dois blocos principais:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GlauberLASantiago/Grave-M-dio-Agudo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### `setup()`
+Executado apenas uma vez quando o programa inicia.
 
-### Support or Contact
+Função:
+- abrir o programa em **modo de tela cheia**.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### `draw()`
+Executado continuamente em loop.
+
+Funções:
+- colorir o fundo da tela;
+- verificar se alguma tecla foi pressionada;
+- desenhar o retângulo na posição correspondente.
+
+Sempre que o loop reinicia, o fundo da tela é redesenhado, apagando a figura anterior.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Processing**
+- Linguagem baseada em **Java**
+- Programação visual interativa
+
+Site oficial:  
+https://processing.org/
+
+## ▶️ Como executar
+
+1. Instale a IDE **Processing**.
+2. Abra o arquivo do sketch (`.pde`).
+3. Execute o programa.
+4. Pressione as teclas:
